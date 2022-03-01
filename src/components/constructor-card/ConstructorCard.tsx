@@ -9,20 +9,18 @@ type Props = {
 const ConstructorCard = ({ constructorData }: Props) => {
   return (
     <div className={styles.container}>
-      <div className={styles.row}>
-        <img src={constructorData.logoUrl} alt={constructorData.name} />
-        <div>
-          <h3>{constructorData.name}</h3>
-          <span>{constructorData.city}</span>
-        </div>
-        {!!constructorData.specialties && (
-          <ul>
-            {constructorData.specialties.map((specialtie: Specialtie) => (
-              <li key={specialtie.id}>{specialtie.specialtie}</li>
-            ))}
-          </ul>
-        )}
+      <img src={constructorData.logoUrl} alt={constructorData.name} />
+      <div>
+        <h3>{constructorData.name}</h3>
+        <span>{constructorData.city}</span>
       </div>
+      {!!constructorData.specialties && (
+        <ul>
+          {constructorData.specialties.map((specialtie: Specialtie) => (
+            <li key={specialtie.id}>{specialtie.specialtie}</li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };

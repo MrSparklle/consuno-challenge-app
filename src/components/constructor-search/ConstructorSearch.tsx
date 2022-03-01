@@ -23,7 +23,7 @@ const ConstructorSearch = ({ specialites, onSearchFilter }: Props) => {
 
   const onSearchHandler = (e: any) => {
     setSearchTerm(e.target.value);
-    onSearchFilter(searchTerm, filters);
+    onSearchFilter(e.target.value, filters);
   };
 
   // create the checkboxes based on specialites Map
