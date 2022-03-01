@@ -21,12 +21,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": "src",
-    "paths": {
-      "@/*": ["*"],
-      "@assets/*": ["assets/*"],
-      "@pages/*": ["pages/*"],
-      "@components/*": ["components/*"],
-    }
   },
   "include": [
     "src"

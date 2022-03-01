@@ -13,7 +13,11 @@
   box-shadow: 5px 5px 15px 0px rgba(91, 164, 164, 0.6);
 
   fieldset {
-    // border: 0;
+    .checkboxGroup {
+      display: inline-block;
+      margin-bottom: 0.8rem;
+    }
+
     padding: 1.6rem;
     margin-top: 1.6rem;
     border: 1px solid var(--cyan-medium-dark);

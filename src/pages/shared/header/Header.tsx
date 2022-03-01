@@ -1,11 +1,12 @@
 import React from "react";
-import { ConstructorSearch } from "components";
 import styles from "./Header.module.scss";
 
-const Header = () => {
-  return <div className={styles.headerBackground}>
-    <ConstructorSearch />
-  </div>;
+type Props = {
+  children?: React.ReactNode;
+};
+
+const Header = ({ children }: Props) => {
+  return <div className={styles.headerBackground}>{children}</div>;
 };
 
 export default Header;

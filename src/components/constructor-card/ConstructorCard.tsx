@@ -1,22 +1,30 @@
-import React from 'react'
-import styles from './ConstructorCard.module.scss';
+import React from "react";
+import styles from "./ConstructorCard.module.scss";
+import { Constructor, Specialtie } from "models";
 
-const ConstructorCard = () => {
+type Props = {
+  constructorData: Constructor;
+};
+
+const ConstructorCard = ({ constructorData }: Props) => {
   return (
     <div className={styles.container}>
       <div className={styles.row}>
-        <img src="https://placekitten.com/200/200" alt="Constructor Logo" />
+        <img src={constructorData.logoUrl} alt={constructorData.name} />
         <div>
-          <h3>Alpha Constructor Co</h3>
-          <span>Berlin</span>
+          <h3>{constructorData.name}</h3>
+          <span>{constructorData.city}</span>
         </div>
-        <ul>
-          <li>plubing</li>
-          <li>eletrical</li>
-        </ul>
+        {!!constructorData.specialties && (
+          <ul>
+            {constructorData.specialties.map((specialtie: Specialtie) => (
+              <li key={specialtie.id}>{specialtie.specialtie}</li>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ConstructorCard
+export default ConstructorCard;
