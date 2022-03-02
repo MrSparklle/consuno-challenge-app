@@ -10,7 +10,7 @@ const ConstructorSearch = ({ specialites, onSearchFilter }: Props) => {
   const [filters, setFilters] = useState(new Map<number, boolean>());
   const [searchTerm, setSearchTerm] = useState("");
 
-  const onCheckHandler = (e: any, id: number) => {
+  const onCheckHandler = (e: React.ChangeEvent<HTMLInputElement>, id: number) => {
     const newFilters = new Map(filters).set(id, e.target.checked);
 
     if (!e.target.checked) {
@@ -21,7 +21,7 @@ const ConstructorSearch = ({ specialites, onSearchFilter }: Props) => {
     onSearchFilter(searchTerm, newFilters);
   };
 
-  const onSearchHandler = (e: any) => {
+  const onSearchHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
     onSearchFilter(e.target.value, filters);
   };
@@ -46,12 +46,6 @@ const ConstructorSearch = ({ specialites, onSearchFilter }: Props) => {
 
   return (
     <div className={styles.container}>
-      {specialites.forEach((specialite: string, id: number) => (
-        <div>
-          <input type="checkbox" name="" id={id.toString()} />
-          <label htmlFor={id.toString()}>{specialite}</label>
-        </div>
-      ))}
       <div>
         <label htmlFor="constructorSearch">Search:</label>
         <input
