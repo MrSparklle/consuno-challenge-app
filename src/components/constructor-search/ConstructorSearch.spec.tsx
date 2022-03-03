@@ -4,15 +4,15 @@ import "@testing-library/jest-dom/extend-expect";
 import ConstructorSearch from "./ConstructorSearch";
 
 describe("Constructor Search component", () => {
-  const setSearch = jest.fn((value) => {});
+  const mockOnSearchFilter = jest.fn();
   const specialties = new Map([
-    [1, "teste"],
-    [2, "other"],
+    [10, "painting"],
+    [60, "excavation"],
   ]);
 
   const setup = () => {
     render(
-      <ConstructorSearch specialites={specialties} onSearchFilter={setSearch} />
+      <ConstructorSearch specialites={specialties} onSearchFilter={mockOnSearchFilter} />
     );
   };
 
@@ -25,7 +25,22 @@ describe("Constructor Search component", () => {
     fireEvent.change(searchInput, { target: { value: inputValue } });
 
     expect(searchInput.value).toBe(inputValue);
-    expect(setSearch).toHaveBeenCalledWith(inputValue, new Map());
+    expect(mockOnSearchFilter).toHaveBeenCalledWith(inputValue, new Map());
+  });
+
+
+  it("should be checked when clicked and unchecked when clicked again", async () => {
+    setup();
+    const excavationCheckbox = await screen.findByLabelText("excavation");
+
+    fireEvent.click(excavationCheckbox);
+
+    expect(excavationCheckbox).toBeChecked();
+    
+    fireEvent.click(excavationCheckbox);
+
+    expect(excavationCheckbox).not.toBeChecked();
+    
   });
 
   it("should present all the specialites on screen", () => {

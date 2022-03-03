@@ -35,8 +35,8 @@ const ConstructorList = () => {
 
         setConstructors(allConstructors.current);
       } catch (error) {
-        console.error("Something was wrong: ", error);
-        setError("Error while loading constructors"+error);
+        // console.error("Something was wrong: ", error);
+        setError("Error while loading constructors");
       } finally {
         setIsLoaded(true);
       }
