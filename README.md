@@ -1,6 +1,38 @@
-# Getting Started with Create React App
+# Consuno Coding Challenge - Frontend (Joel Darós)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Create a simple React application that shows a list of construction companies, each with the following information:
+- Company name
+- Logo (you may use a placeholder image, e.g. using https://placekitten.com/)
+- Specialties (e.g. Excavation, Plumbing, Electrical)
+- City
+
+---
+
+## Steps to run:
+** This app depends on his backend to properly work *** 
+
+Please, check the README on backend folder before starts this app.
+
+
+From the main root of the project (the same folder that this file is located) run the commands bellow:
+1. `npm install` 
+2. `npm start`
+3. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+![](/public/screenshots/01.png)
+
+## Features:
+- Search for a company by typing into a search field. The search term gets matched only against the company name and the list of companies is filtered based on the search term in real time as the user is typing.
+- Filter the list using a set of checkboxes to include only those companies which offer a particular speciality (e.g. only Plumbing).
+- All unit tests are implemented with minimum 80% coverage, you can run it with `npm test -- --coverage --watchAll=false`
+
+## Future Improvements:
+- A big constructors lists needs to be paginated or lazy loaded when user scrols.
+- In a real scenario with a big constructors list, search and filter features, needs to be done in the backend. We could to implement a debouce time in realtime seach field to avoid many requests in backend.
+- When clicked a constructor card, the app could open a new screen with complete detais about it.
+- The avaliable specialties list could be returned from a specific endpoint from the backend.
+
+---
 
 ## Available Scripts
 
@@ -29,18 +61,3 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
