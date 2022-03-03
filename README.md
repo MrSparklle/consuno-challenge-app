@@ -22,6 +22,7 @@ From the main root of the project (the same folder that this file is located) ru
 ![](/public/screenshots/01.png)
 
 ## Features:
+- The app if responsive for web and mobile devices, it has a single media query at 576px.
 - Search for a company by typing into a search field. The search term gets matched only against the company name and the list of companies is filtered based on the search term in real time as the user is typing.
 - Filter the list using a set of checkboxes to include only those companies which offer a particular speciality (e.g. only Plumbing).
 - All unit tests are implemented with minimum 80% coverage, you can run it with `npm test -- --coverage --watchAll=false`
@@ -31,6 +32,7 @@ From the main root of the project (the same folder that this file is located) ru
 - In a real scenario with a big constructors list, search and filter features, needs to be done in the backend. We could to implement a debouce time in realtime seach field to avoid many requests in backend.
 - When clicked a constructor card, the app could open a new screen with complete detais about it.
 - The avaliable specialties list could be returned from a specific endpoint from the backend.
+- Better responsive behaviour, for diferent screen devices (tablets/wearables). (add more media queries). 
 
 ---
 
