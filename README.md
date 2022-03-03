@@ -19,7 +19,7 @@ From the main root of the project (the same folder that this file is located) ru
 2. `npm start`
 3. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-![](/public/screenshots/01.png)
+![](./public/screenshots/01.png)
 
 ## Features:
 - The app if responsive for web and mobile devices, it has a single media query at 576px.
