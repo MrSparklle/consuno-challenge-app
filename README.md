@@ -19,7 +19,7 @@ From the main root of the project (the same folder that this file is located) ru
 2. `npm start`
 3. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-![](/public/screenshots/01.png)
+![](./public/screenshots/01.png)
 
 ## Features:
 - Search for a company by typing into a search field. The search term gets matched only against the company name and the list of companies is filtered based on the search term in real time as the user is typing.
